@@ -195,41 +195,11 @@
 
             \end{tabular}
             \captionof{table}{Karnugh Map for $D_2$}
+
         \end{table}
-        The circuit is like below:
+        The circuit is in the attached files.
 
 
-        \begin{tikzpicture}[font=\sffamily,>=triangle 45]
-            \node [shape=dff] (DFF0) at ( 6,0 ) {};
-            \node [shape=dff] (DFF1) at ( 6,4 ) {};
-            \node [not gate US, draw] at (0,3.5) (xnot) {};
-            \node [and gate US, draw] at (1,3) (and1) {};
-            \node [and gate US, draw] at (1,3.75) (and2) {};
-            \node [and gate US, draw, logic gate inputs=nnn] at (1,4.5) (and3) {};
-            \node [or gate US, draw, logic gate inputs=nnn] at (4,4.5) (or1) {};
-            \node [and gate US, draw] at (0,0) (and4) {};
-            \node [and gate US, draw] at (0,1) (and5) {};
-            \node [or gate US, draw] at (1,0.5) (or2) {};
-            %(xnot.in) node[anchor = east] {$x$}
-            \draw (or1.output) -- (DFF1.D);
-            \draw (DFF1.Q) -- (and1.input 1);
-            \draw (xnot.output) -- (and1.input 2);
-            \draw (DFF1.Q) -- (and2.input 1);
-            \draw (DFF0.Q) -- (and2.input 2);
-            \draw (xnot.input) -- (and3.input 1);
-            \draw (DFF1.Qn) -- (and3.input 2);
-            \draw (DFF0.Qn) -- (and3.input 3);
-            \draw (and3.output) -- (or1.input 1);
-            \draw (and2.output) -- (or1.input 2);
-            \draw (and1.output) -- (or1.input 3);
-            \draw (and4.output) -- (or2.input 2);
-            \draw (and5.output) -- (or2.input 1);
-            \draw (or2.output) -- (DFF0.D);
-            \draw (DFF0.Qn) -- (and4.input 1);
-            \draw (DFF0.Q) -- (and5.input 1);
-            \draw (xnot.output) -- (and5.input 2);
-
-        \end{tikzpicture}
     \item
         \begin{enumerate}
             \item
@@ -254,6 +224,7 @@
                 they are slower than static memories and they are denser than
                 static memories and they use more power. - Using static memories
                 is easier.
+                The picture is in the attached files.
         \end{enumerate}
     \item
 
@@ -263,7 +234,6 @@
             \item
                 $T_{access}=t_1+(1-h_1)(t_2+(1-h_2)(t_3+(1-h_3)t)))=
                 3*10^{-9}+0.08*(20*10^{-9}+0.30*(350*10^{-9}+0.65*12*10^{-3}))=1.87213*10^{-4}$
-
 
                 It is 0.83 times slower than the first system.
             \item
