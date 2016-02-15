@@ -235,7 +235,8 @@
                 $T_{access}=t_1+(1-h_1)(t_2+(1-h_2)(t_3+(1-h_3)t)))=
                 3*10^{-9}+0.08*(20*10^{-9}+0.30*(350*10^{-9}+0.65*12*10^{-3}))=1.87213*10^{-4}$
 
-                It is 0.83 times slower than the first system.
+                It is 0.83 times faster than the first system.
+                This means this system is actually slower.
             \item
                 $T_{access}=t_1+(1-h_1)(t_2+(1-h_2)(t_3+(1-h_3)(t_4+1-h_4(t_5))))=
                 3*10^{-9}+0.08*(8*10^{-9}+0.15*(20*10^{-9}+0.3*(10^{-9}*350+0.65*
@@ -246,20 +247,20 @@
     \item
         \begin{enumerate}
             \item
-                height = bitline = 8B = $8*8$ = 64 bits.\\
+                height = bitline  = 8B = $8*8$ = 64 bits.\\
                 width = wordline = 64 * 1024 = 65536 bits.\\
                 minimum accessible data = 8B. \\
                 volume = size = $64*65536$ = 4194304 bits.\\
                 number of bits for addressing = $\log_2{65536}=16.0$
             \item
-                height = bitline = 1B = $1*8$ = 8 bits.\\
-                width = wordline = 16 * 1024 = 16384 bits.\\
+                height = wordline = 1B = $1*8$ = 8 bits.\\
+                width = bitline = 16 * 1024 = 16384 bits.\\
                 minimum accessible data = 1B. \\
                 volume = size = $8*16384$ = 131072 bits.\\
                 number of bits for addressing = $\log_2{131072}=17.0$
             \item
-                height = bitline = 4B = $4*8$ = 32 bits.\\
-                width = wordline = $2^{13}$ = 8192 bits.\\
+                height = wordline = 4B = $4*8$ = 32 bits.\\
+                width = bitline = $2^{13}$ = 8192 bits.\\
                 minimum accessible data = 4B. \\
                 volume = size = $32*8192$ = 262144 bits.\\
                 number of bits for addressing = 13 bits\\
