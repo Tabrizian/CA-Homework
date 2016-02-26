@@ -32,23 +32,23 @@
         size of the cache is 16 blocks.\\
         \begin{table}[h!]
             \centering
-            \begin{tabular}{|c|c|c|c|c|c|}
+            \begin{tabular}{|c|c|c|c|c|}
                 \hline
-                requested address & block-number & tag & hit 1 & hit 2 & hit 3\\ \hline
+                requested address & tag & hit 1 & hit 2 & hit 3\\ \hline
                 \hline
-                0  & 0  & 0 & x          & \checkmark & \checkmark \\ \hline
-                21 & 5  & 1 & x          & \checkmark & \checkmark \\ \hline
-                23 & 7  & 1 & \checkmark & \checkmark & \checkmark \\ \hline
-                35 & 3  & 2 & x          & \checkmark & \checkmark \\ \hline
-                76 & 1  & 4 & x          & \checkmark & \checkmark \\ \hline
-                1  & 1  & 0 & \checkmark & \checkmark & \checkmark \\ \hline
-                66 & 2  & 4 & \checkmark & \checkmark & \checkmark \\ \hline
-                80 & 0  & 5 & x          & \checkmark & \checkmark \\ \hline
-                54 & 6  & 3 & x          & \checkmark & \checkmark \\ \hline
-                36 & 4  & 2 & \checkmark & \checkmark & \checkmark \\ \hline
-                24 & 8  & 1 & \checkmark & \checkmark & \checkmark \\ \hline
-                23 & 7  & 1 & \checkmark & \checkmark & \checkmark \\ \hline
-                75 & 11 & 4 & \checkmark & \checkmark & \checkmark \\ \hline
+                0  & 0 & x          & \checkmark & \checkmark \\ \hline
+                21 & 1 & x          & \checkmark & \checkmark \\ \hline
+                23 & 1 & \checkmark & \checkmark & \checkmark \\ \hline
+                35 & 2 & x          & \checkmark & \checkmark \\ \hline
+                76 & 4 & x          & \checkmark & \checkmark \\ \hline
+                1  & 0 & \checkmark & \checkmark & \checkmark \\ \hline
+                66 & 4 & \checkmark & \checkmark & \checkmark \\ \hline
+                80 & 5 & x          & \checkmark & \checkmark \\ \hline
+                54 & 3 & x          & \checkmark & \checkmark \\ \hline
+                36 & 2 & \checkmark & \checkmark & \checkmark \\ \hline
+                24 & 1 & \checkmark & \checkmark & \checkmark \\ \hline
+                23 & 1 & \checkmark & \checkmark & \checkmark \\ \hline
+                75 & 4 & \checkmark & \checkmark & \checkmark \\ \hline
             \end{tabular}
         \end{table}
         \\
@@ -56,5 +56,81 @@
         all of the requested addresses are less than 256.
         \\Miss ratio = $6/42=1/7$
 
+    \item \mbox{}
+        \begin{enumerate}
+            \item \mbox{}
+                \\
+                \begin{table}[h!]
+                    \centering
+                    \begin{tabular}{|c|c|c|c|c|}
+                        \hline
+                        requested addresses & tag & hit & number of fulled & row\\ \hline
+                        \hline
+                        0  & 0 & x         &1&0\\ \hline
+                        1  & 0 & \checkmark&1&0\\ \hline
+                        15 & 3 & x         &2&0\\ \hline
+                        14 & 3 & \checkmark&2&0\\ \hline
+                        14 & 3 & \checkmark&2&0\\ \hline
+                        15 & 3 & \checkmark&2&0\\ \hline
+                        16 & 4 & x         &1&1\\ \hline
+                        2  & 0 & \checkmark&2&0\\ \hline
+                        23 & 5 & x         &2&1\\ \hline
+                        27 & 6 & x         &3&1\\ \hline
+                        16 & 4 & \checkmark&3&1\\ \hline
+                        14 & 3 & \checkmark&2&0\\ \hline
+                        1  & 0 & \checkmark&2&0\\ \hline
+                        21 & 5 & \checkmark&3&1\\ \hline
+                        22 & 5 & \checkmark&3&1\\ \hline
+                        23 & 5 & \checkmark&3&1\\ \hline
+                        22 & 5 & \checkmark&3&1\\ \hline
+                        10 & 2 & x        &3&0\\ \hline
+                        18 & 4 &\checkmark&3&1\\ \hline
+                        15 & 3 &\checkmark&3&1\\ \hline
+                        1  & 0 &\checkmark&3&0\\ \hline
+                        0  & 0 &\checkmark&3&0\\ \hline
+                        14 & 3 &\checkmark&3&0\\ \hline
+                        28 & 7 &x         &4&1\\ \hline
+                        25 & 7 &\checkmark&4&1\\ \hline
+                    \end{tabular}
+                \end{table}
+                \\ Hit ratio is equal to 0.72.
+            \item [(b,c)]
+                These two states are the same.
+                \\
+                \begin{table}[h!]
+                    \centering
+                    \begin{tabular}{|c|c|c|}
+                        \hline
+                        requested address & tag & hit\\ \hline
+                        \hline
+                        0  &0&x\\ \hline
+                        1  &0&\checkmark\\ \hline
+                        15 &7&x\\ \hline
+                        14 &7&\checkmark\\ \hline
+                        14 &7&\checkmark\\ \hline
+                        15 &7&\checkmark\\ \hline
+                        16 &8&x\\ \hline
+                        2  &1&x\\ \hline
+                        23 &11&x\\ \hline
+                        27 &13&x\\ \hline
+                        16 &8&\checkmark\\ \hline
+                        14 &7&\checkmark\\ \hline
+                        1  &0&\checkmark\\ \hline
+                        21 &10&x\\ \hline
+                        22 &11&\checkmark\\ \hline
+                        23 &11&\checkmark\\ \hline
+                        22 &11&\checkmark\\ \hline
+                        10 &5&x\\ \hline
+                        18 &8&\checkmark\\ \hline
+                        15 &7&\checkmark\\ \hline
+                        1  &0&\checkmark\\ \hline
+                        0  &0&\checkmark\\ \hline
+                        14 &7&\checkmark\\ \hline
+                        28 &14&x\\ \hline
+                        25 &12&x\\ \hline
+                \end{tabular}
+            \end{table}
+            \\ The hit ratio is equal to 0.56
+        \end{enumerate}
 \end{enumerate}
 \end{document}
