@@ -90,10 +90,20 @@
                         0  & 0 &\checkmark&3&0\\ \hline
                         14 & 3 &\checkmark&3&0\\ \hline
                         28 & 7 &x         &4&1\\ \hline
-                        25 & 7 &\checkmark&4&1\\ \hline
+                        25 & 6 &\checkmark&4&1\\ \hline
                     \end{tabular}
                 \end{table}
                 \\ Hit ratio is equal to 0.72.
+                \\ Final state of cache:
+                \begin{table}[h!]
+                    \begin{tabular}{||c|c|c|c||c|c|c|c||c|c|c|c||c|c|c|c||}
+                        \hline
+                        0&1&2&3&null&null&null&null&8&9&10&11&12&13&14&15\\ \hline
+                        \hline
+                        16&17&18&19&20&21&22&23&24&25&26&27&28&29&30&31\\ \hline
+
+                    \end{tabular}
+                \end{table}
             \item [(b,c)]
                 These two states are the same.
                 \\
@@ -132,5 +142,8 @@
             \end{table}
             \\ The hit ratio is equal to 0.56
         \end{enumerate}
+    \item \mbox{}
+        Time of not finding requested data in cache = 70ns.\\
+        $T_{access}=0.95*10+0.05*60=12.5$
 \end{enumerate}
 \end{document}
