@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb}
+\begin{document}
+\begin{enumerate}
+    \item \mbox{}
+
+        \begin{enumerate}
+            \item \mbox{}
+                \begin{table}[h!]
+                    \centering
+                    \begin{tabular}{|c|c|c|}
+                        \hline
+                        6 bit tag & 8 bit index & 2 bit relational position\\ \hline
+                    \end{tabular}
+                \end{table}
+                $64k=2^{16}$\\
+                number of bits for block = 2 bits = 4 position.\\
+                number of bits for index = size of cache (block form) = 8 bits.\\
+                number of bits for tag = 6 bits.
+            \item
+                16 bits.
+            \item
+                $2^{10}/4=2^8=256$ blocks.
+            \item
+                $T_{access}=100(h_1)+(1-h_1)(1200) \leq 120 \to 1080 \leq 1100h_1\\
+                \to 1 \geq h_1 \geq 0.981818  $
+
+        \end{enumerate}
+
+    \item \mbox{}
+        size of the cache is 16 blocks.\\
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|}
+                \hline
+                requested address & block-number & tag & hit 1 & hit 2 & hit 3\\ \hline
+                \hline
+                0  & 0  & 0 & x          & \checkmark & \checkmark \\ \hline
+                21 & 5  & 1 & x          & \checkmark & \checkmark \\ \hline
+                23 & 7  & 1 & \checkmark & \checkmark & \checkmark \\ \hline
+                35 & 3  & 2 & x          & \checkmark & \checkmark \\ \hline
+                76 & 1  & 4 & x          & \checkmark & \checkmark \\ \hline
+                1  & 1  & 0 & \checkmark & \checkmark & \checkmark \\ \hline
+                66 & 2  & 4 & \checkmark & \checkmark & \checkmark \\ \hline
+                80 & 0  & 5 & x          & \checkmark & \checkmark \\ \hline
+                54 & 6  & 3 & x          & \checkmark & \checkmark \\ \hline
+                36 & 4  & 2 & \checkmark & \checkmark & \checkmark \\ \hline
+                24 & 8  & 1 & \checkmark & \checkmark & \checkmark \\ \hline
+                23 & 7  & 1 & \checkmark & \checkmark & \checkmark \\ \hline
+                75 & 11 & 4 & \checkmark & \checkmark & \checkmark \\ \hline
+            \end{tabular}
+        \end{table}
+        \\
+        In the second and the third round all of the addresses are hitted because
+        all of the requested addresses are less than 256.
+        \\Miss ratio = $6/42=1/7$
+
+\end{enumerate}
+\end{document}
