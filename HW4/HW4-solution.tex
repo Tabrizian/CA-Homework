@@ -28,6 +28,7 @@
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 \usepackage{amsmath}
 \usepackage{tikz-qtree-compat}
+\usepackage{amssymb}
 % Margins
 \topmargin=-0.45in
 \evensidemargin=0in
@@ -136,4 +137,33 @@
 \tableofcontents
 \newpage
 
+\begin{homeworkProblem}
+    \problemAnswer{
+        Computer A:$T_{access}=t_1*h_1+(1-h_1)*(t_1+t_2)=0.98*2+0.02*22=2.4ns$\\
+        Computer B:$T_{access}=t_1*h_1+(1-h_1)*(t_1+t_2)=0.90*1.2+0.1*21.2=3.2ns$
+    }
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    \begin{homeworkSection}{(a)}
+         \problemAnswer{
+             \begin{center}
+                 \begin{tabular}{|c|c|c|c|c|}
+                     \hline
+                     0&1&...&63&64\\ \hline
+                     x&x         &x         &x         &x\\ \hline
+                     x&\checkmark&\checkmark&\checkmark&x\\ \hline
+                     x&\checkmark&\checkmark&\checkmark&x\\ \hline
+                 \end{tabular}
+             \end{center}
+             hit rate = 64\%
+         }
+    \end{homeworkSection}
+    \begin{homeworkSection}{(b)}
+        \problemAnswer{
+           With LRU replacement policy you the hit rate will be the same as
+           above because with the above policy also the least recently used element
+           will be deleted. hit rate = 64\%
+        }
+    \end{homeworkSection}
+\end{homeworkProblem}
 \end{document}
