@@ -2,3 +2,7 @@
 \contentsline {section}{Problem 2}{3}
 \contentsline {subsection}{(a)}{3}
 \contentsline {subsection}{(b)}{3}
+\contentsline {section}{Problem 3}{3}
+\contentsline {section}{Problem 4}{3}
+\contentsline {subsection}{(a)}{3}
+\contentsline {subsection}{(b)}{3}

@@ -155,15 +155,219 @@
                      x&\checkmark&\checkmark&\checkmark&x\\ \hline
                  \end{tabular}
              \end{center}
-             hit rate = 64\%
+             hit rate = 64.61\%
          }
     \end{homeworkSection}
     \begin{homeworkSection}{(b)}
         \problemAnswer{
            With LRU replacement policy you the hit rate will be the same as
            above because with the above policy also the least recently used element
-           will be deleted. hit rate = 64\%
+           will be deleted. hit rate = 64.61\%
         }
     \end{homeworkSection}
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    \problemAnswer{
+        Memory size = 64*8 word=512 words.
+        Block size = 3 bits.
+        Cache set index = 2 bits.
+        Tag = 9-2-3 = 4 bits.
+        Number of bits for addressing a word = 9 bits.
+        Word size = 5 bits.
+    }
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    \begin{homeworkSection}{(a)}
+    \problemAnswer{
+
+        \begin{tabular}{|c|}
+            \hline
+            3     \\ \hline
+            null  \\ \hline
+            null  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            3  \\ \hline
+            2  \\ \hline
+            null  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            3  \\ \hline
+            2  \\ \hline
+            1  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            0  \\ \hline
+            2  \\ \hline
+            1  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            0  \\ \hline
+            3  \\ \hline
+            1  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            0  \\ \hline
+            3  \\ \hline
+            2  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            4  \\ \hline
+            3  \\ \hline
+            2  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            4  \\ \hline
+            3  \\ \hline
+            2  \\ \hline
+            hit \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            4  \\ \hline
+            3  \\ \hline
+            2  \\ \hline
+            hit \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            4  \\ \hline
+            1  \\ \hline
+            2  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            4  \\ \hline
+            1  \\ \hline
+            0  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            4  \\ \hline
+            1  \\ \hline
+            0  \\ \hline
+            hit \\
+        \end{tabular}
+        \\
+        miss rate=9/12=0.75
+    }
+\end{homeworkSection}
+\begin{homeworkSection}{(b)}
+    \problemAnswer{
+
+        \begin{tabular}{|c|}
+            \hline
+            3     \\ \hline
+            null  \\ \hline
+            null  \\ \hline
+            null  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            3  \\ \hline
+            2  \\ \hline
+            null  \\ \hline
+            null  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            3  \\ \hline
+            2  \\ \hline
+            1  \\ \hline
+            null  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            3  \\ \hline
+            2  \\ \hline
+            1  \\ \hline
+            0  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            3  \\ \hline
+            2  \\ \hline
+            1  \\ \hline
+            0  \\ \hline
+            hit \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            3  \\ \hline
+            2  \\ \hline
+            1  \\ \hline
+            0  \\ \hline
+            hit \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            4  \\ \hline
+            2  \\ \hline
+            1  \\ \hline
+            0  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            4  \\ \hline
+            3  \\ \hline
+            1  \\ \hline
+            0  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            4  \\ \hline
+            3  \\ \hline
+            2  \\ \hline
+            0  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            4  \\ \hline
+            3  \\ \hline
+            2  \\ \hline
+            1  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            0  \\ \hline
+            3  \\ \hline
+            2  \\ \hline
+            1  \\ \hline
+            miss \\
+        \end{tabular}
+        \begin{tabular}{|c|}
+            \hline
+            0  \\ \hline
+            4  \\ \hline
+            2  \\ \hline
+            1  \\ \hline
+            miss \\
+        \end{tabular}
+    }
+\end{homeworkSection}
 \end{homeworkProblem}
 \end{document}
